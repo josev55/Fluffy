@@ -1,5 +1,6 @@
 #  FluffyIgnite
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
+[![Build Status](https://travis-ci.org/josev55/Fluffy.svg?branch=master)](https://travis-ci.org/josev55/Fluffy)
 
 * Standard compliant React Native App Utilizing [Ignite](https://github.com/infinitered/ignite)
 
@@ -59,4 +60,3 @@ Secrets.GOOGLE_MAPS_API_KEY  // 'abcdefgh'
 ```
 
 The `.env` file is ignored by git keeping those secrets out of your repo.
-
