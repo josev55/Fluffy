@@ -3,6 +3,7 @@
 import React from 'react'
 import { Text, KeyboardAvoidingView, Image, View, TextInput, TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
+import Hr from 'react-native-hr'
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
 
@@ -21,23 +22,33 @@ class Login extends React.Component {
           <KeyboardAvoidingView behavior='padding'>
             <View style={styles.usernameContainer}>
               <Text style={styles.label}>Nombre de Usuario</Text>
-              <TextInput keyboardType='email-address' style={styles.textInput} />
+              <TextInput underlineColorAndroid='white' keyboardType='email-address' style={styles.textInput} />
             </View>
             <View style={styles.passwordContainer}>
               <Text style={styles.label}>Contraseña</Text>
-              <TextInput style={styles.textInput} secureTextEntry />
+              <TextInput underlineColorAndroid='white' style={styles.textInput} secureTextEntry />
             </View>
           </KeyboardAvoidingView>
         </View>
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.ingresarButton} onPress={() => console.log('Button Clicked')}>
+          <TouchableOpacity style={styles.ingresarButton} onPress={() => this.props.navigation.navigate('RegisterScreen')}>
             <Text style={styles.buttonText}>Ingresar</Text>
+          </TouchableOpacity>
+          <View style={styles.separatorLine}>
+            <Hr lineColor='#FFF' />
+          </View>
+          <TouchableOpacity style={[styles.ingresarButton, {backgroundColor: '#3b5998'}]} onPress={() => console.log('Button Clicked')}>
+            <Text style={styles.buttonText}>Ingresar con Facebook</Text>
           </TouchableOpacity>
         </View>
       </View>
     )
   }
 
+}
+
+Login.propTypes = {
+  navigation: React.PropTypes.object
 }
 
 const mapStateToProps = (/* state */) => {

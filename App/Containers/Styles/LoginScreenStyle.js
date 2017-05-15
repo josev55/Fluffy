@@ -4,7 +4,8 @@ import { ApplicationStyles } from '../../Themes/'
 export default StyleSheet.create({
   ...ApplicationStyles.screen,
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: '#004777'
   },
   logoContainer: {
     alignItems: 'center',
@@ -17,8 +18,12 @@ export default StyleSheet.create({
     height: 130
   },
   formContainer: {
-    flex: 0.2,
+    flex: 0.1,
     justifyContent: 'center'
+  },
+  label: {
+    color: 'white',
+    fontWeight: 'bold'
   },
   usernameContainer: {
     marginLeft: 60,
@@ -32,7 +37,7 @@ export default StyleSheet.create({
   textInput: {
     fontSize: 18,
     fontFamily: 'Helvetica',
-    color: '#777'
+    color: '#FFF'
   },
   buttonContainer: {
     flex: 0.15,
@@ -41,7 +46,7 @@ export default StyleSheet.create({
   },
   ingresarButton: {
     borderRadius: 10,
-    backgroundColor: '#AAA',
+    backgroundColor: '#F05C23',
     alignSelf: 'stretch',
     marginLeft: 60,
     marginRight: 60,
@@ -54,5 +59,12 @@ export default StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
     fontFamily: 'Helvetica'
+  },
+  separatorLine: {
+    paddingLeft: 80,
+    paddingRight: 80,
+    paddingTop: 30,
+    paddingBottom: 30,
+    alignSelf: 'stretch'
   }
 })
